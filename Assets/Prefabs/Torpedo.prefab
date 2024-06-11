@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1406808977870472912}
   - component: {fileID: 422752562568428195}
-  - component: {fileID: 5624737681436294667}
+  - component: {fileID: 6942837919069543263}
   m_Layer: 0
   m_Name: Torpedo
   m_TagString: Untagged
@@ -46,19 +46,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3286f0a0a63979e4a82f3b42ef55f80b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skill: {fileID: 0}
---- !u!114 &5624737681436294667
-MonoBehaviour:
+  facingRight: 0
+--- !u!50 &6942837919069543263
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5958508543547142440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a51ebcec6dedf94082b71a731ab3480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6821348130922364088
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,10 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D body;
     public GameObject GFX;
-    public GameObject TorpedoExit;
-    public GameObject TorpedoPrefab;
+    public GameManager MyGM;
+
+    int playerLevel = 1;
+    float playerHealth = 100f;
 
     bool moving;
     float horizontal;
@@ -17,8 +19,8 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        MyGM = GameObject.Find("GameManager").GetComponent<GameManager>();
         body = GetComponent<Rigidbody2D>();
-        StartCoroutine(ReloadTorpedo());
     }
 
     void Update()
@@ -53,15 +55,12 @@ public class Player : MonoBehaviour
     {
         GFX.transform.GetChild(0).GetChild(0).transform.Rotate(new Vector3(0,0,3) * 50 * Time.deltaTime, Space.Self);
     }
-    private IEnumerator ReloadTorpedo()
-    {
-        yield return new WaitForSeconds(2f);
-        FireTorpedo();
-    }
-    private void FireTorpedo()
-    {
-        Instantiate(TorpedoPrefab, TorpedoExit.transform);
-        StartCoroutine(ReloadTorpedo());
-    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Enemie")
+        {
+            playerHealth -= collision.gameObject.GetComponent<Enemie>().Stats.Damage;
+        }
+    }
 }
