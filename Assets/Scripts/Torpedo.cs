@@ -9,8 +9,8 @@ public class Torpedo : MonoBehaviour
     public SkillBase skill;
     void Start()
     {
-
         StartCoroutine(DestoryAfterTime(skill.TimeToDestory));
+
     }
 
     void Update()
@@ -30,8 +30,18 @@ public class Torpedo : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         Destroy(gameObject);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+    }
     private void OnDestroy()
     {
-        Debug.Log("Explosion from torpedo");
+
     }
 }

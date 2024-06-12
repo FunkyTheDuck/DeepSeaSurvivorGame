@@ -56,10 +56,11 @@ public class Player : MonoBehaviour
         GFX.transform.GetChild(0).GetChild(0).transform.Rotate(new Vector3(0,0,3) * 50 * Time.deltaTime, Space.Self);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.tag == "Enemie")
+        if (collision.gameObject.tag == "Enemy")
         {
+            Debug.Log("Player losing health");
             playerHealth -= collision.gameObject.GetComponent<Enemie>().Stats.Damage;
         }
     }

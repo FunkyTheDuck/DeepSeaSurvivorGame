@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
                 Cooldown = 3,
                 TimeToDestory = 3,
                 Radius = 10,
-                Speed = 1000,
+                Speed = 5000,
             }
         };
         PlayerScript = GameObject.Find("Player").GetComponent<Player>();
@@ -34,12 +34,14 @@ public class GameManager : MonoBehaviour
 
         StartWeapons();
     }
-    private void  StartWeapons()
+    private void StartWeapons()
     {
-        SkillManager.StartTorpedo();
+        SkillManager.StartTorpedo(this);
     }
-
-
+    public Vector3 GetPlayerPos()
+    {
+        return PlayerScript.transform.position;
+    }
 
     public SkillBase GetSkillBaseFromName(string name)
     {

@@ -11,5 +11,6 @@ public class EnemieBase
     public string Description { get; set; }
     public float Health { get; set; }
     public float Damage { get; set; }
+    public float RecoverTime { get; set; }
     public float Speed { get; set; }
 }

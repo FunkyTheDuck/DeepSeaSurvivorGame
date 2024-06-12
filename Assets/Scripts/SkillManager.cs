@@ -10,10 +10,11 @@ public class SkillManager : MonoBehaviour
     SkillBase torpedoStats;
     private void Start()
     {
-        myGM = GameObject.Find("GameManager").GetComponent<GameManager>();
+
     }
-    public void StartTorpedo()
+    public void StartTorpedo(GameManager myGm)
     {
+        myGM = myGm;
         torpedoStats = myGM.GetSkillBaseFromName("Torpedo");
         torpedoPos = transform.GetChild(1).transform.GetChild(1).transform;
         CreateTorpedo();

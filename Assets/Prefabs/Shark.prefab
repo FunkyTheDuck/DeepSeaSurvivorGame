@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5958508543547142440
+--- !u!1 &1696630158977601079
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,81 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1406808977870472912}
-  - component: {fileID: 422752562568428195}
-  - component: {fileID: 6942837919069543263}
-  - component: {fileID: 8442569686981230962}
-  - component: {fileID: 658346373774954257}
+  - component: {fileID: 2489583187761414346}
+  - component: {fileID: 4840762104990538648}
+  - component: {fileID: 8163897194399272395}
   m_Layer: 0
-  m_Name: Torpedo
-  m_TagString: PlayerWeapon
+  m_Name: Shark
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1406808977870472912
+--- !u!4 &2489583187761414346
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958508543547142440}
+  m_GameObject: {fileID: 1696630158977601079}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5956056574976158723}
+  - {fileID: 2362356904518805068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &422752562568428195
+--- !u!114 &4840762104990538648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958508543547142440}
+  m_GameObject: {fileID: 1696630158977601079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3286f0a0a63979e4a82f3b42ef55f80b, type: 3}
+  m_Script: {fileID: 11500000, guid: dcaf6c982718f0745af00241b022b0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  facingRight: 0
---- !u!50 &6942837919069543263
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958508543547142440}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!61 &8442569686981230962
+  Name: Shark
+  EnemieManager: {fileID: 0}
+--- !u!61 &8163897194399272395
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958508543547142440}
+  m_GameObject: {fileID: 1696630158977601079}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -119,21 +91,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1838768, y: 0.31463975}
+  m_Size: {x: 2.044488, y: 1.3791256}
   m_EdgeRadius: 0
---- !u!114 &658346373774954257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5958508543547142440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56a7b09458209f24484e088d98a46cc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &6821348130922364088
+--- !u!1 &7701069474429106147
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,37 +101,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5956056574976158723}
-  - component: {fileID: 8172931446305993840}
+  - component: {fileID: 2362356904518805068}
+  - component: {fileID: 706789020727064171}
   m_Layer: 0
-  m_Name: TorpedoSprite
+  m_Name: Shark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5956056574976158723
+--- !u!4 &2362356904518805068
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6821348130922364088}
+  m_GameObject: {fileID: 7701069474429106147}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1406808977870472912}
+  m_Father: {fileID: 2489583187761414346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8172931446305993840
+--- !u!212 &706789020727064171
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6821348130922364088}
+  m_GameObject: {fileID: 7701069474429106147}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -205,13 +165,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e5ab7109722f28145825a1fa8ae44242, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: af5a6cd25b817d74aa44a41eac541084, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.252, y: 0.384}
+  m_Size: {x: 30.71, y: 20.033476}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
