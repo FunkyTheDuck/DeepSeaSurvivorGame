@@ -51,6 +51,7 @@ public class Enemie : MonoBehaviour
             }
             if (Stats.Health < 0)
             {
+                EnemieManager.SpawnManaStar(transform.position, Stats.Name);
                 Destroy(gameObject);
             }
         }

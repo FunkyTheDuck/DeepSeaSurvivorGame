@@ -1323,7 +1323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1fec578a0fafe04db2c6c30fa7c8583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkillList: []
   PlayerScript: {fileID: 0}
   SkillManager: {fileID: 0}
   EnemieManager: {fileID: 0}
@@ -1339,6 +1338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce1b4f44bc692845970ef0d33d62b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myGm: {fileID: 0}
   spawnInterval: 5
   GreenSmallFishPrefab: {fileID: 3187315533283423899, guid: 9d91234f499c14c44b3d933f592e5717, type: 3}
   OrangeSmallFishPrefab: {fileID: 6046789112497859746, guid: 3e6427301ca1b474b89387a4d631733f, type: 3}
@@ -1347,6 +1347,7 @@ MonoBehaviour:
   YellowBigFishPrefab: {fileID: 4281818448149388763, guid: 074d0749d2250a74ca059180eb304c6c, type: 3}
   RedBigFishPrefab: {fileID: 5870609467265567262, guid: 2aefe88bc0b9527408fd0c022e99b460, type: 3}
   SharkPrefab: {fileID: 1696630158977601079, guid: 9eeac606a9304fb4bb8673415bb8fee6, type: 3}
+  ManaStarPrefab: {fileID: 3090309312342061338, guid: aa07e8858391ae04fb197332122c4b66, type: 3}
 --- !u!1 &1800882582
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,6 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95d62ea0125d0554db045cb7adda98db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SkillList: []
   TorpedoPrefab: {fileID: 5958508543547142440, guid: 26d14f056dd1fbd4188f0d2febc7980c, type: 3}
 --- !u!68 &1800882587
 EdgeCollider2D:

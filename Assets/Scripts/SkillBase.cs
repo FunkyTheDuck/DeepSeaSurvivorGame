@@ -14,4 +14,5 @@ public class SkillBase
     public float TimeToDestory { get; set;}
     public float Radius { get; set; }
     public float Speed { get; set; }
+    public bool IsActive { get; set; }
 }

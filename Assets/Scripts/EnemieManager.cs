@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemieManager : MonoBehaviour
 {
     List<EnemieBase> enemies;
-    GameManager myGm;
+    public GameManager myGm;
     private float elapsedTime = 0f;
     public float spawnInterval = 5f;
 
@@ -17,7 +17,7 @@ public class EnemieManager : MonoBehaviour
     public GameObject YellowBigFishPrefab;
     public GameObject RedBigFishPrefab;
     public GameObject SharkPrefab;
-
+    public GameObject ManaStarPrefab;
 
     private void Start()
     {
@@ -104,6 +104,13 @@ public class EnemieManager : MonoBehaviour
         };
 
         StartCoroutine(SpawnEnemies());
+    }
+
+    public void SpawnManaStar(Vector3 deadEnemyPos, string enemyName)
+    {
+        GameObject manaStar = Instantiate(ManaStarPrefab);
+        manaStar.GetComponent<ManaStar>().InitializedManaStar(enemyName);
+        manaStar.transform.position = deadEnemyPos;
     }
 
     private IEnumerator SpawnEnemies()
