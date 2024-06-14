@@ -10,8 +10,6 @@ public class SkillManager : MonoBehaviour
     Transform torpedoPos;
     public GameObject TorpedoPrefab;
     SkillBase torpedoStats;
-    List<string> activeWeapon;
-    List<Dictionary<string, SkillBase>> activeWeapons;
     private void Start()
     {
         CreateSkillList();
@@ -30,7 +28,7 @@ public class SkillManager : MonoBehaviour
                 Cooldown = 3,
                 TimeToDestory = 3,
                 Radius = 10,
-                Speed = 5000,
+                Speed = 400,
                 IsActive = true,
             }
         };
@@ -41,18 +39,15 @@ public class SkillManager : MonoBehaviour
         {
             CreateSkillList();
         }
-        Debug.Log("Start weapon method");
         myGM = myGm;
         Debug.Log(SkillList[0].Name);
         foreach (SkillBase weapon in SkillList)
         {
             if(weapon.IsActive)
             {
-                Debug.Log("A weapon is active");
                 switch (weapon.Name.ToLower())
                 {
                     case "torpedo":
-                        Debug.Log("Start firing torpedos");
                         StartTorpedo();
                         break;
                     case "":
@@ -64,6 +59,7 @@ public class SkillManager : MonoBehaviour
     }
     private void StartTorpedo()
     {
+        Debug.Log("Start firing torpedos");
         torpedoStats = GetSkillBaseFromName("Torpedo");
         torpedoPos = transform.GetChild(1).transform.GetChild(1).transform;
         CreateTorpedo();

@@ -9,17 +9,19 @@ public class GameManager : MonoBehaviour
     public Player PlayerScript;
     public SkillManager SkillManager;
     public EnemieManager EnemieManager;
+    public GameUI GameUIScript;
 
     void Start()
     {
         PlayerScript = GameObject.Find("Player").GetComponent<Player>();
         SkillManager = GameObject.Find("Player").GetComponent<SkillManager>();
+        GameUIScript = GameObject.Find("GameUI").GetComponent<GameUI>();
         EnemieManager = gameObject.GetComponent<EnemieManager>();
 
-
+        GameUIScript.SetMaxHealth(PlayerScript.GetMaxHealth());
         StartWeapons();
     }
-    public void PlayerLeveledUp()
+    public void PlayerLeveledUp(float currentHealth, float maxHealth)
     {
         Debug.Log("Player level up");
         Time.timeScale = 0f;
